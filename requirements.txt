@@ -13,3 +13,4 @@ scikit-learn
 tqdm
 matplotlib
 seaborn
+onnx\nonnxruntime\nmotmetrics
