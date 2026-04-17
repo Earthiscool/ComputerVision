@@ -21,7 +21,7 @@
     const f = fileInput.files[0];
     const fd = new FormData(); fd.append('file', f);
     out.textContent = 'Uploading...';
-    const res = await fetch('/api/predict', {method:'POST', body:fd});
+    const res = await fetch('/api/onnx_predict', {method:'POST', body:fd});
     const json = await res.json();
     if (json.error) { out.textContent = 'Error: '+json.error; return; }
     out.textContent = JSON.stringify(json.predictions, null, 2);
